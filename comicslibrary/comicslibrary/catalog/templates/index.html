@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block title %}<title>HOME</title> {% endblock %}
+
+{% block content %}
+<h1>Comics Library Home</h1>
+
+  <p>Welcome to <em>ComicsLibrary</em>, a very basic Django website.</p>
+
+<h2>Dynamic content</h2>
+
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Comics:</strong> {{ num_comics }}</li>
+    <li><strong>Publishers:</strong> {{ num_publishers }}</li>
+  </ul>
+
+{% endblock %}

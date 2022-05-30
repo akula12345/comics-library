@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Title: {{ comic.title }}</h1>
+
+  <p><strong>Publisher:</strong> <a href="{% url 'publisher-detail' comic.publisher.pk %}">{{ comic.publisher }}</a></p> 
+  <p><strong>Summary:</strong> {{ book.summary }}</p>
+  <p><strong>Genre:</strong> {% for genre in comic.genre.all %} {{ genre }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+
+{% endblock %}
